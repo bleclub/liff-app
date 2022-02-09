@@ -10,11 +10,13 @@
 <body>
    
     <div class="container">
-        <h1 class="text-center mt-4 mb-4">LINE - LIFF APP PACC</h1>
+        <h1 class="text-center mt-4 mb-4">LINE - LIFF APP BLE</h1>
         <ul class="list-group">
             <li class="list-group-item"><p id="os"><b>OS: </b></p></li>
             <li class="list-group-item"><p id="language"><b>Language: </b></p></li>
             <li class="list-group-item"><p id="version"><b>Version: </b></p></li>
+            <li class="list-group-item"><p id="isInClient"><b>isInClient: </b></p></li>
+            <li class="list-group-item"><p id="accessToken"><b>AccessToken: </b></p></li>
         </ul>
     </div>
      
@@ -25,6 +27,8 @@
             document.getElementById("os").append(liff.getOS())
             document.getElementById('language').append(liff.getLanguage())
             document.getElementById('version').append(liff.getVersion())
+            document.getElementById("isInClient").append(liff.isInClient())
+            document.getElementById("accessToken").append(liff.getAccessToken())
         }
 
         async function main(){
