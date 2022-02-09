@@ -8,11 +8,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Hello world!</h1>
+    <h1 class="text-center">LINE - LIFF APP PACC</h1>
+
+    <p id="os"><b>OS: </b></p>
+    <p id="language"><b>Language: </b></p>
+    <p id="version"><b>Version: </b></p>
 
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     <script>
-        
+        function getEnvironment(){
+            document.getElementById("os").append(liff.getOS())
+            document.getElementById('language').append(liff.getLanguage())
+            document.getElementById('version').append(liff.getVersion())
+        }
+
+        async function main(){
+            await liff.init({liffID: "1656875950-p9maa27d"})
+        }
+        main()
     </script>
 </body>
 </html>
