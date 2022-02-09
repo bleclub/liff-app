@@ -1,6 +1,6 @@
 #pictureUrl {
     margin: 0 auto;
-    width: 32%;
+    width: 30%;
     display: -moz-box;
     display: -webkit-box;
     display: box;
@@ -17,4 +17,9 @@
 
 h1{
     font-size: 2rem;
+}
+
+#accessToken {
+    display: block;
+    overflow: auto
 }
