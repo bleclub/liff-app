@@ -42,7 +42,7 @@
 
         <div class="mt-4" id="button-secton">
             <button class="btn btn-dark col-12" id="btnMsg" onclick="sendMsg()">Send Message</button>
-            <button class="btn btn-secondary col-12 mt-2" id="btbLogout" onclick="logout()">Logout</button>
+            <button class="btn btn-secondary col-12 mt-2" id="btnLogout" onclick="logout()">Logout</button>
             <button class="btn btn-warning col-12 mt-2" id="btnClose" onclick="closed()">Close</button>
         </div>
         
@@ -58,6 +58,7 @@
         function logout(){
             liff.logout()
             window.location = "https://pacc.go.th"
+            window.location.reload()
         }
 
         function closed(){
@@ -105,6 +106,12 @@
             document.getElementById("isInClient").append(liff.isInClient())
             document.getElementById("accessToken").append(liff.getAccessToken())
             document.getElementById('lineVersion').append(liff.getLineVersion())
+
+            if(liff.isInClient()){
+                document.getElementById("btnLogout").style.display = "none"
+            } else {
+                document.getElementById("btnClose").style.display = "none"
+            }
         }
 
         async function main(){
