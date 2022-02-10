@@ -27,6 +27,9 @@
         <ul class="list-group mt-4">
             <li class="list-group-item"><p id="os"><b>OS: </b></p></li>
             <li class="list-group-item"><p id="language"><b>Language: </b></p></li>
+            <li class="list-group-item">
+                <p id="lineVersion"><b>Line Version: </b></p>
+            </li>
             <li class="list-group-item"><p id="version"><b>Version: </b></p></li>
             <li class="list-group-item"><p id="isInClient"><b>isInClient: </b></p></li>
             <li class="list-group-item"><p id="accessToken"><b>AccessToken: </b></p></li>
@@ -54,6 +57,7 @@
             document.getElementById('version').append(liff.getVersion())
             document.getElementById("isInClient").append(liff.isInClient())
             document.getElementById("accessToken").append(liff.getAccessToken())
+            document.getElementById('lineVersion').append(liff.getLineVersion())
         }
 
         async function main(){
