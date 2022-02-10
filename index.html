@@ -56,14 +56,16 @@
     <script>
 
         async function sendMsg(){
+            // ส่งได้สูงสุด 5 ชุดข้อความ
             await liff.sendMessages([
-                // {
-                //     "type": "text",
-                //     "text": "Hello from LIFF Application 1"
-                // },
                 {
                     "type": "text",
                     "text": "Welcome to Thailand's Test and Go Program"
+                },
+                {
+                    "type": "sticker",
+                    "packageId": "789",
+                    "stickerId": "10862"
                 },
                 {
                     "type": "image",
