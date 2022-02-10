@@ -19,7 +19,25 @@ h1{
     font-size: 2rem;
 }
 
-#accessToken {
+#accessToken, #userId {
     display: block;
     word-wrap: break-word;
+}
+
+.list-group{
+    font-size: .9rem;
+}
+
+.list-group-item{
+    height: 40px;
+    padding: 10px;
+}
+
+.list-group .active{
+    background-color:#16c464;
+    border: 0 none;
+}
+
+h5{
+    font-size: 1rem;
 }
