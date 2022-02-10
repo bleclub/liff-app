@@ -59,8 +59,7 @@
 
         async function scanCode(){
             const result = await liff.scanCodeV2()
-            document.getElementById("resultScanCode").append('')
-            document.getElementById("resultScanCode").append(result.value)
+            window.location = result.value
         }
 
         async function sendMsg(){
