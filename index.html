@@ -57,18 +57,18 @@
 
         async function sendMsg(){
             await liff.sendMessages([
+                // {
+                //     "type": "text",
+                //     "text": "Hello from LIFF Application 1"
+                // },
+                // {
+                //     "type": "text",
+                //     "text": "Hello from LIFF Application 2"
+                // },
                 {
-                    "type": "text",
-                    "text": "Hello from LIFF Application 1"
-                },
-                {
-                    "type": "text",
-                    "text": "Hello from LIFF Application 2"
-                },
-                {
-                    "type": "sticker",
-                    "packageId": "446",
-                    "stickerId": "1993"
+                    "type": "image",
+                    "originalContentUrl": "https://bleclub.github.io/liff-app/images/original_picture.jpg",
+                    "previewImageUrl": "https://bleclub.github.io/liff-app/images/preview_picture.jpg"
                 }
             ])
             alert("Message Sent!")
