@@ -22,6 +22,7 @@
             <li class="list-group-item"><p id="displayName"><b>Display Name: </b></p></li>
             <li class="list-group-item"><p id="statusMessage"><b>Status: </b></p></li>
             <li class="list-group-item"><p id="email"><b>Email: </b></p></li>
+            <li class="list-group-item"><p id="resultScanCode"><b>QR-Code result: </b></p></li>
         </ul>
 
         <ul class="list-group mt-4">
@@ -41,6 +42,7 @@
         </ul>
 
         <div class="mt-4" id="button-secton">
+            <button class="btn btn-dark col-12" id="btnScanCode" onclick="scanCode()">Scan QR-Code</button>
             <button class="btn btn-dark col-12" id="btnMsg" onclick="sendMsg()">Send Message</button>
             <button class="btn btn-secondary col-12 mt-2" id="btnLogout" onclick="logout()">Logout</button>
             <button class="btn btn-warning col-12 mt-2" id="btnClose" onclick="closed()">Close</button>
@@ -55,6 +57,11 @@
 
     <script>
 
+        async function scanCode(){
+            const result = await liff.scanCodeV2()
+            document.getElementById("resultScanCode").append(result.value)
+        }
+
         async function sendMsg(){
             // ส่งได้สูงสุด 5 ชุดข้อความ
             await liff.sendMessages([
@@ -62,11 +69,11 @@
                     "type": "text",
                     "text": "Welcome to Thailand's Test and Go Program"
                 },
-                {
-                    "type": "sticker",
-                    "packageId": "789",
-                    "stickerId": "10862"
-                },
+                // {
+                //     "type": "sticker",
+                //     "packageId": "789",
+                //     "stickerId": "10862"
+                // },
                 {
                     "type": "image",
                     "originalContentUrl": "https://bleclub.github.io/liff-app/images/original_picture.jpg",
