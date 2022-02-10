@@ -22,7 +22,7 @@
             <li class="list-group-item"><p id="displayName"><b>Display Name: </b></p></li>
             <li class="list-group-item"><p id="statusMessage"><b>Status: </b></p></li>
             <li class="list-group-item"><p id="email"><b>Email: </b></p></li>
-            <li class="list-group-item"><p id="resultScanCode"><b>QR-Code result: </b></p></li>
+            <!-- <li class="list-group-item"><p id="resultScanCode"><b>QR-Code result: </b></p></li> -->
         </ul>
 
         <ul class="list-group mt-4">
@@ -61,7 +61,7 @@
             const result = await liff.scanCodeV2()
             liff.openWindow({
               url: result.value,
-              external: true
+              external: false
             })
         }
 
